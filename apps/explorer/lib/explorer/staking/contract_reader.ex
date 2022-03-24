@@ -191,7 +191,7 @@ defmodule Explorer.Staking.ContractReader do
       ) do
     staking_epochs_joint =
       staking_epochs
-      |> Enum.map_join("", fn epoch ->
+      |> Enum.map_join(fn epoch ->
         epoch
         |> Integer.to_string(16)
         |> String.pad_leading(64, ["0"])
@@ -267,7 +267,7 @@ defmodule Explorer.Staking.ContractReader do
       ) do
     staking_epochs_joint =
       staking_epochs
-      |> Enum.map_join("", fn epoch ->
+      |> Enum.map_join(fn epoch ->
         epoch
         |> Integer.to_string(16)
         |> String.pad_leading(64, ["0"])

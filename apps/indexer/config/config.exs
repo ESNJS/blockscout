@@ -1,6 +1,6 @@
 # This file is responsible for configuring your application
 # and its dependencies with the aid of the Mix.Config module.
-use Mix.Config
+import Config
 
 import Bitwise
 
@@ -34,7 +34,7 @@ config :indexer,
   metadata_updater_seconds_interval:
     String.to_integer(System.get_env("TOKEN_METADATA_UPDATE_INTERVAL") || "#{2 * 24 * 60 * 60}"),
   # bytes
-  memory_limit: 1 <<< 30,
+  memory_limit: 5 <<< 30,
   first_block: System.get_env("FIRST_BLOCK") || "",
   last_block: System.get_env("LAST_BLOCK") || "",
   trace_first_block: System.get_env("TRACE_FIRST_BLOCK") || "",
